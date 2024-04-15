@@ -1,0 +1,143 @@
+{
+    "global": {
+        "use-micro-lib": true,
+        "output-debug-info": true,
+        "build-output-dir": "./.rtt-studio/Debug\\",
+        "list-output-dir": ".\\build\\",
+        "mem-layout": {
+            "rom": [
+                {
+                    "name": "rom1",
+                    "checked": false,
+                    "address": "0x0",
+                    "size": "0x0",
+                    "is_entry": false
+                },
+                {
+                    "name": "rom2",
+                    "checked": false,
+                    "address": "0x0",
+                    "size": "0x0",
+                    "is_entry": false
+                },
+                {
+                    "name": "rom3",
+                    "checked": false,
+                    "address": "0x0",
+                    "size": "0x0",
+                    "is_entry": false
+                },
+                {
+                    "name": "irom1",
+                    "checked": true,
+                    "address": "0x8000000",
+                    "size": "0xc0000",
+                    "is_entry": true
+                },
+                {
+                    "name": "irom2",
+                    "checked": false,
+                    "address": "0x0",
+                    "size": "0x0",
+                    "is_entry": false
+                }
+            ],
+            "ram": [
+                {
+                    "name": "ram1",
+                    "checked": false,
+                    "noInit": false,
+                    "address": "0x0",
+                    "size": "0x0"
+                },
+                {
+                    "name": "ram2",
+                    "checked": false,
+                    "noInit": false,
+                    "address": "0x0",
+                    "size": "0x0"
+                },
+                {
+                    "name": "ram3",
+                    "checked": false,
+                    "noInit": false,
+                    "address": "0x0",
+                    "size": "0x0"
+                },
+                {
+                    "name": "iram1",
+                    "checked": true,
+                    "noInit": false,
+                    "address": "0x20000000",
+                    "size": "0x18000"
+                },
+                {
+                    "name": "iram2",
+                    "checked": false,
+                    "noInit": false,
+                    "address": "0x0",
+                    "size": "0x0"
+                }
+            ]
+        }
+    },
+    "c/cpp": {
+        "include-list": [
+            "applications",
+            ".",
+            "drivers",
+            "Libraries\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+            "Libraries\\STM32F1xx_HAL_Driver\\Inc",
+            "Libraries\\CMSIS\\Include",
+            "packages\\samples",
+            "packages\\samples\\basic\\led",
+            "packages\\samples\\kernel\\thread",
+            "rt-thread\\include",
+            "rt-thread\\libcpu\\arm\\cortex-m3",
+            "rt-thread\\libcpu\\arm\\common",
+            "rt-thread\\components\\drivers\\include",
+            "rt-thread\\components\\drivers\\include",
+            "rt-thread\\components\\drivers\\include",
+            "rt-thread\\components\\finsh",
+            "rt-thread\\components\\libc\\compilers\\armlibc"
+        ],
+        "define-list": [
+            "USE_HAL_DRIVER",
+            " RT_USING_ARM_LIBC",
+            " STM32F103xE"
+        ],
+        "misc-controls": "",
+        "execute-only-code": false,
+        "read-only-position-independent": false,
+        "read-write-position-independent": false,
+        "split-load-and-store-multiple": false,
+        "c99-mode": true,
+        "optimization": 1,
+        "optimize-for-time": false,
+        "one-elf-section-per-function": false,
+        "strict-ansi-c": false,
+        "enum-container-always-int": false,
+        "plain-char-is-signed": false,
+        "gnu-extensions": false,
+        "warnings": 0
+    },
+    "asm": {
+        "include-list": [],
+        "define-list": [],
+        "misc-controls": "",
+        "execute-only-code": false,
+        "read-only-position-independent": false,
+        "read-write-position-independent": false,
+        "split-load-and-store-multiple": false,
+        "thumb-mode": false,
+        "no-warnings": false
+    },
+    "linker": {
+        "auto-gen-scatter-file": true,
+        "linker-scatter-file": "",
+        "misc-controls": "--keep *.o(.rti_fn.*)   --keep *.o(FSymTab)",
+        "read-only-position-independent": false,
+        "read-write-position-independent": false,
+        "not-search-std-libs": false
+    }
+}
